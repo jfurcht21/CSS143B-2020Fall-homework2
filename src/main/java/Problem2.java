@@ -7,10 +7,30 @@ public class Problem2 {
     // Do not change signature (function name, parameters and return type)
     // Do not use extra space for another array. Solution to be in-pace with O(1) extra memory
     public static int remove(int[] nums) {
-        int duplicateCounter = 0;
-        for(int i = 0; i <nums.length; i++)
+        int unique = 0;
+
+        for (int i = 0; i < nums.length; i++)
         {
-            for(int j = 0; j < nums.length; j++)
+            if (i == nums.length-1)
+            {
+                if(nums[i] != nums[i-1])
+                nums[unique] = nums[i];
+                unique++;
+                break;
+            }
+            if (nums[i] != nums[i+1])
+            {
+                nums[unique] = nums[i];
+                unique++;
+            }
+
+        }
+        return unique;
+
+        /*int duplicateCounter = 0;
+        for(int i = 0; i < nums.length; i++)
+        {
+            for(int j = i+1; j < nums.length - 1; j++)
             {
                 if(nums[i] == nums[j])
                 {
@@ -20,6 +40,6 @@ public class Problem2 {
             }
         }
 
-        return nums.length - duplicateCounter;
+        return nums.length - duplicateCounter;*/
     }
 }
