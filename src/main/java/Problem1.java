@@ -6,7 +6,7 @@ public class Problem1 {
     that comes after it in the array. If the number is bigger, it gets moved back in the array. This
     process repeats until the number is not larger than the one that comes after it in the array.
     The outer for loop then moves to the next number in the array. This process repeats until the entire
-    array is sorted.
+    array is sorted correctly.
      */
 
     // Do not change signature (function name, parameters type, and return type)
