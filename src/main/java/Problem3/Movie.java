@@ -18,6 +18,11 @@ public abstract class Movie implements StoreMediaOperations {
 
     @Override
     public boolean equals(Object obj) {
-        // homework
+
+        if(this.id == obj.id)
+        {
+            return true;
+        }
+        return false;
     }
 }
