@@ -1,7 +1,14 @@
 public class Problem2 {
 
     /*
-    Describe your algorithm here in up to 5 sentences:
+    This algorithm doesn't actually remove duplicates from an array but it changes the first
+    part of the array to represent each unique character one time. The actual length of the array does not
+    change. This iterates through the array, keeping track of the last unique number in the array.
+    If a duplicate number is found, the algorithm skips over it. When the algorithm reaches the next
+    unique number, it will overwrite the previous duplicate with the unique number. When it reaches the
+    end of the array, the algorithm actually compares to the previous number to avoid an array out of
+    bound exception. Used (https://www.geeksforgeeks.org/remove-duplicates-sorted-array/) for reference when
+    I ran into blockers.
      */
 
     // Do not change signature (function name, parameters and return type)
