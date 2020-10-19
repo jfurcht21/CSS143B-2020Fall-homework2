@@ -6,11 +6,10 @@ public class Problem1 {
     as the array is iterated through. If the value of the number is high or lower than the
     "mid"(the number that is being used as the comparison) the number will then be swapped
     either lower or higher. If the number is equivalent to the mid, the loop moves on to the next number.
-    I used https://www.geeksforgeeks.org/sort-an-array-of-0s-1s-and-2s/ as a reference but put my own twist
-    on it by adding a validation to check for a valid array. I originally had a nested for loop which was
-    essentially a bubble sort but technically iterated through the loop more than once. It was less code and
-    easier to read but did not satisfy the requirements of the homework. I have kept the loop commented out
-    below for reference.
+    I used https://www.geeksforgeeks.org/sort-an-array-of-0s-1s-and-2s/ as a reference when I hit a blocker
+    but put my own twist on it by adding a validation to check for a valid array. I originally had a nested
+    for loop which iterated through the loop more than once. It was less code and easier to read but did not
+    satisfy the requirements of the homework. I have kept the loop commented out below for reference.
      */
 
     // Do not change signature (function name, parameters type, and return type)
