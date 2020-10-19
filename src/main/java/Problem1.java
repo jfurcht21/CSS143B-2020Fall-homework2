@@ -7,9 +7,8 @@ public class Problem1 {
     "mid"(the number that is being used as the comparison) the number will then be swapped
     either lower or higher. If the number is equivalent to the mid, the loop moves on to the next number.
     I used https://www.geeksforgeeks.org/sort-an-array-of-0s-1s-and-2s/ as a reference when I hit a blocker
-    but put my own twist on it by adding a validation to check for a valid array. I originally had a nested
-    for loop which iterated through the loop more than once. It was less code and easier to read but did not
-    satisfy the requirements of the homework. I have kept the loop commented out below for reference.
+    but put my own twist on it by adding a validation to check for a valid array. I also added some logic to
+    remove unnecessary swapping.
      */
 
     // Do not change signature (function name, parameters type, and return type)
@@ -21,6 +20,19 @@ public class Problem1 {
 
         if(nums.length >= 1) {
             while (mid <= high) {
+                //If the number at index 0 == 0, loops moves on
+                if(mid == 0 && nums[0] == 0)
+                {
+                    mid++;
+                    continue;
+                }
+                //If the number at the index == the number before the index
+                //That number is sorted and therefore logic skips it
+                if(mid >=1 && nums[mid] == nums[mid-1])
+                {
+                    mid++;
+                    continue;
+                }
                 switch (nums[mid]) {
                     case 0: {
                         temp = nums[low];
@@ -46,18 +58,6 @@ public class Problem1 {
         }
         else
             System.out.println("Array must be at least one integer long");
-
-        //Iterates through more than once hence not correct in the context of the homework.
-        /*for(int i=0; i < nums.length; i++)
-        {
-            for (int j = 0; j < nums.length -1; j++) {
-                if (nums[j] >= nums[j + 1]) {
-                    int tmp = nums[j + 1];
-                    nums[j + 1] = nums[j];
-                    nums[j] = tmp;
-                }
-            }
-        }*/
     }
 
 }
