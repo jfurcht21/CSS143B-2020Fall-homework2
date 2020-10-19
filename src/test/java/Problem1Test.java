@@ -7,6 +7,7 @@ public class Problem1Test {
     @Test
     public void testSortColor() {
         int[][] inputs = {
+                {2},
                 {0, 1, 2},
                 {2, 1, 0},
                 {0, 1, 2},
@@ -19,6 +20,7 @@ public class Problem1Test {
         };
 
         int[][] expects = {
+                {2},
                 {0, 1, 2},
                 {0, 1, 2},
                 {0, 1, 2},
